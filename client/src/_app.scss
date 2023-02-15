@@ -1,0 +1,16 @@
+.container {
+    background-image: linear-gradient(to bottom right, rgba($color-linear-1, .7), rgba($color-linear-2, .7));
+    border-radius: 10px;
+    height: 90vh;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 3rem 6rem rgba($color-black, 0.2);
+
+    @include respond(tab-land) {
+        background-image: linear-gradient(to bottom right, rgba($color-royalblue, .9), rgba($color-linear-2, .9));
+        border-radius: 0;
+        min-height: 100vh;
+        height: 100%;
+        overflow: scroll;
+    }
+}

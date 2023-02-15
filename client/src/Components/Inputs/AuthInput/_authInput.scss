@@ -1,0 +1,37 @@
+.auth {
+    &__input {
+        padding: 1rem;
+        font-size: 1.5rem;
+        border: none;
+        border-radius: 1rem;
+
+        @include respond(tab-land) {
+            padding: 2rem;
+            font-size: 2rem;
+        }
+
+        @include respond(phone) {
+            padding: 3rem;
+            font-size: 3rem;
+        }
+    }
+
+    &__submit {
+        padding: 1rem;
+        font-size: 1.5rem;
+        border: none;
+        border-radius: 1rem;
+        background-color: $color-present;
+        color: $color-white;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $color-linear-thought-2;
+        }
+
+        @include respond(tab-land) {
+            padding: 2rem;
+            font-size: 2rem;
+        }
+    }
+}

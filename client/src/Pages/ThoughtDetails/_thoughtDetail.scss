@@ -1,0 +1,221 @@
+.details {
+    padding-top: 7rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 90vh;
+    width: 100%;
+    margin: 0 auto;
+    background-image: url('../img/groupPhilosophers.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @include respond(tab-land) {
+        padding-top: 0;    
+    }
+
+    &__container {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        padding: 1.8rem;
+        background-image: radial-gradient(rgba($color-linear-grey-1, .85), rgba($color-linear-grey-2, .85));
+        background-size: cover;
+        border-radius: 15px;
+        padding-bottom: 1rem;
+        margin-bottom: 2rem;
+        box-shadow: 0 2rem 4rem rgba($color-black, .3);
+
+        @include respond(tab-land) {
+            width: 60%;
+        }
+
+        @include respond(tab-port) {
+            width: 80%;
+        }
+ 
+        @include respond(phone) {
+            width: 95%;
+        }
+    }
+
+    &__comments {
+        max-height: 19rem;
+
+        @include respond(tab-land) {
+            max-height: fit-content;
+            padding-bottom: 3rem;
+        }
+
+        &--scrollable {
+            overflow-y: scroll;
+
+            @include respond(tab-land) {
+                overflow-y: hidden;
+            }
+        }
+    }
+
+    
+
+    &__comments::-webkit-scrollbar {
+        width: 1.5rem;
+        background-color: $color-white;
+    }
+
+    &__comments::-webkit-scrollbar-thumb {
+        background-color: $color-present;
+        border-radius: 10px;
+    }
+
+    &__comments::-webkit-scrollbar-thumb:hover {
+        background-color: $color-royalblue
+    }
+
+    &__creationDate {
+        position: absolute;
+        top: .5rem;
+        left: .5rem;
+        font-size: 1.2rem;
+        color: $color-white;
+
+        @include respond(tab-land) {
+            font-size: 1.4rem;
+        }
+    }
+    
+    &__deleteBox {
+        position: absolute;
+        right: 5rem;
+        bottom: 0;
+        cursor: pointer;
+    }
+
+    &__commentCount {
+        position: absolute;
+        left: .5rem;
+        bottom: .2rem;
+        font-size: 1.2rem;
+        font-style: italic;
+        color: $color-white;
+
+        @include respond(tab-land) {
+            font-size: 1.4rem;
+        }
+
+        &--spanCount{
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: $color-white;
+
+            @include respond(tab-land) {
+                font-size: 1.4rem;
+            }
+        }
+    }
+
+        &__label {
+            font-size: 1.5rem;
+            font-weight: bolder;
+            color: $color-white;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+    
+    
+        &__input,
+        &__textarea {
+            padding:.7rem;
+            margin: auto;
+            margin-bottom: 1rem;
+            border-radius: 5px;
+            background-color: $color-white;
+        }
+    
+        &__input {
+            width: 60%;
+            font-size: 1.1rem;
+    
+            @include respond(tab-medium) {
+                font-size: 1.3rem;
+                width: 60%;
+            }
+    
+            @include respond(tab-port) {
+                font-size: 1.4rem
+            }
+    
+    
+    
+            &--hashtag {
+                width: 14rem;
+    
+                @include respond(tab-medium) {
+                    width: 16rem;
+                }
+    
+                @include respond(tab-port) {
+                    width: 19rem;
+                }
+            }
+        }
+    
+        &__textarea {
+            width: 90%;
+            height: 11rem;
+            font-size: 1.4rem;
+            resize: none;
+    
+            @include respond(tab-medium) {
+                font-size: 1.7rem;
+                height: 12.5rem;
+            }
+    
+            @include respond(tab-port) {
+                font-size: 1.8rem;
+                height: 14rem;
+            }
+    
+            @include respond(tab-small) {
+                font-size: 2rem;
+                height: 22rem;
+            }
+    
+            @include respond(phone) {
+                font-size: 2.2rem;
+                height: 28rem;
+            }
+    
+        }
+    
+        &__hashtagsBox {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin-bottom: 1rem;
+            
+            
+            @include respond(tab-port) {
+                flex-direction: column;
+                align-items: center;
+                row-gap: 1rem;
+            }
+        }
+    
+        &__hashtag {
+            width: 40%;
+            display: flex;
+            flex-direction: row;
+    
+            
+            & > * {
+                margin: 0 0.5rem;
+                align-self: center;
+                justify-content: center;
+            }
+        }
+
+}

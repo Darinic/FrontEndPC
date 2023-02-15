@@ -1,0 +1,35 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    cursor: pointer;
+
+    &__link {
+        font-weight: bold;
+      }
+
+      & a {
+        padding: .7rem;
+    margin-right: 2px;
+    margin-left: 2px;
+    border-radius: .4rem;
+    border: 1px solid #6c7ac9;
+    color: #6c7ac9;
+    background: $color-white;
+      }
+
+  }
+
+  .pagination__link--disabled a {
+    color: $color-grey-dark;
+    background: $color-linear-grey-2;
+    border: 1px solid $color-grey-dark;
+  }
+
+  .pagination__link--active a {
+    color: $color-white;
+    background: $color-present;
+    font-weight: bold;
+  }
+
+  

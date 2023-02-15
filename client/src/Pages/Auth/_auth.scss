@@ -1,0 +1,105 @@
+.auth {
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+
+    background-image: url("../img/protagorasPhil.png");
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position: left top 4rem;
+
+    @include respond(tab-land) {
+        height: 100vh;
+        background-size: bottom;
+    }
+
+    @include respond(tab-port) {
+        background-position: bottom;
+        background-size: auto 90%;
+    }
+
+    &__container {
+        width: 40rem;
+        margin: auto;
+        margin-top: 8rem;
+        text-align: center;
+        padding: 2rem;
+        background-image: linear-gradient(to bottom right, rgba($color-linear-grey-1, .9), rgba($color-linear-grey-2, .9));
+        border-radius: 1rem;
+        box-shadow: 0rem 2rem 4rem rgba($color-black, .4);
+
+        @include respond(tab-medium) {
+            margin-top: 10rem;
+        }
+    }
+    
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        row-gap: 2rem;
+        margin-bottom: 1rem;
+
+        @include respond(tab-land) {
+            row-gap: 3rem;
+            align-items: space-around;
+        }
+
+        @include respond(phone) {
+            row-gap: 5rem;
+        }
+    }
+
+    &__switchAuthModeText {
+        color: $color-white;
+        font-size: 1.5rem;
+        text-decoration: none;
+        margin-top: 1rem;
+
+        @include respond(tab-land) {
+            font-size: 2rem;
+        }
+    }
+
+    &__switchAuthModeButton {
+        color: $color-present;
+        padding-left: 6px;
+        font-size: 1.5rem;
+        text-decoration: none;
+        margin-top: 1rem;
+        font-weight: bold;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+
+        &:hover {
+            color: $color-linear-thought-2;
+        }
+
+        @include respond(tab-land) {
+            font-size: 2rem;
+        }
+    }
+
+    &__forgotPasswordButton {
+        display: block;
+        color: $color-grey-light;
+        margin: auto;
+        background-color: transparent;
+        border: none;
+        font-size: 1.3rem;
+        margin-top: 1rem;
+        cursor: pointer;
+        font-weight: bold;
+        text-decoration: none;
+
+        
+        &:hover {
+            color: $color-linear-thought-2;
+        }
+
+        @include respond(tab-land) {
+            font-size: 2rem;
+        }
+    }
+}

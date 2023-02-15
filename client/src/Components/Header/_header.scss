@@ -1,0 +1,117 @@
+.header {
+    position: absolute;
+    z-index: 10000;
+    padding-top: 1.5rem;
+    width: 100%;
+    font-size: 1.9rem;
+
+    @include respond(tab-land) {
+        display: none;
+    }
+    
+
+    &__leftMenu,
+    &__rightMenu {
+        display: flex;
+        font-size: inherit;
+        background-color: transparent;
+        position: relative;
+        align-items: center;
+    }
+
+    &__leftMenu {
+        float:left;
+        margin-right: 1rem;
+
+        @include respond(tab-small) {
+            display: none;
+        }
+    }
+    &__rightMenu {
+        float: right;
+
+        @include respond(tab-small) {
+            float: none;
+            justify-content: space-around;
+    }
+    }
+
+    &__logo {
+        height: 2rem;
+        width: 2rem;
+        margin-right: 0.4rem;
+    }
+
+    &__navLink {
+        text-decoration: none;
+        font-weight: bold;
+        color: $color-white;
+        position: relative;
+        display: flex;
+        padding: 1rem;
+;
+
+        &--1 {
+            margin-left: .5rem;
+        }
+
+        &--2, 
+        &--3,
+        &--4 {
+            margin-right: 2rem;
+
+            @include respond(tab-small) {
+                margin-right: 1.5rem;
+            }
+
+            @include respond(phone) {
+                margin-right: .5rem;
+                padding: 0.6rem;
+            }
+        } 
+
+        &--5 {
+            margin-right: 1rem;
+
+            @include respond(phone) {
+                margin-right: 0rem;
+            }
+        }
+
+    }
+
+    &__navLink::after {
+        position: absolute;
+        bottom: 3px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 0%;
+        content: '.';
+        color: transparent;
+        background: $color-present;
+        height: 2px;
+        transition: all 0.6s ease-in;
+
+        @include respond(phone) {
+            display: none;
+        }
+    }
+
+    &__navLink:hover::after {
+        width: 100%;
+
+        @include respond(phone) {
+            display: none;
+        }
+    }
+
+    &__homepage:hover,
+    &__newItem:hover,
+    &__allItems:hover {
+        cursor: pointer;
+
+    }
+
+
+}

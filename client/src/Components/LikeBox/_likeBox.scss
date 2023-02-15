@@ -1,0 +1,42 @@
+.likeBox {
+
+    &__container {
+        position: absolute;
+        top: 2px;
+        right: 2px;
+    }
+
+    &__button {
+        background-color: transparent;
+        border: none;
+    }
+
+    &__imageContainer {
+        width:1rem;
+        height: 1rem;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    &__image {
+        width: 1rem;
+        height: 1rem;
+        background-color: transparent;
+        transition: all .2s;
+    }
+
+    &__likeCount {
+        padding: 2px;
+        border-radius: 5px;
+        text-align: center;
+        color: $color-white;
+        font-size: 1.2rem;
+        border: 1px solid $color-white;
+    }
+
+    &__likeLabel {
+        text-align: center;
+        font-size: 1.5rem;
+        color: $color-white;
+    }
+}

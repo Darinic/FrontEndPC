@@ -1,0 +1,66 @@
+.comment{
+    background-color: $color-grey-light;
+    display: flex;
+    position: relative;
+    width: 60rem;
+    margin-bottom: 1rem;
+    align-items: center;
+    padding: 1.2rem;
+    border-radius: 5px;
+    color: $color-black;
+    box-shadow: 0 2rem 4rem rgba($color-black, .3);
+
+    @include respond(tab-port) {
+        width: 50rem;
+    }
+
+
+    &__username {
+        color: $color-present;
+        font-weight: bold;
+        font-size: 1.4rem;
+        margin-right: 3rem;
+        width: 5rem;
+
+        @include respond(tab-small) {
+            margin-right: 1rem;
+            font-size: 1.5rem;
+        }
+    }
+
+    &__commentText {
+        text-align: start;
+        font-size: 1.3rem;
+        padding: .4rem;
+        margin-right: 1rem;
+        width: 34rem;
+        overflow-wrap: break-word;
+
+        @include respond(tab-medium) {
+            width: 34rem;
+            font-size: 1.4rem;
+        }
+
+        @include respond(tab-port) {
+            width: 28rem;
+            font-size: 1.6rem;
+        }
+    }
+
+    &__commentDate {
+        font-size: 1rem;
+        color: $color-grey-dark;
+        width: 10rem;
+
+        
+        @include respond(tab-small) {
+            font-size: 1.2rem;
+        }
+    }
+
+    &__deleteComment{
+        cursor: pointer;
+        position: absolute;
+        right: .4rem;
+    }
+}

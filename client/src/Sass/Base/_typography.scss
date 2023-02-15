@@ -1,0 +1,39 @@
+.heading {
+
+    &__primary {
+            color: inherit;
+            text-transform: uppercase;
+            font-family: inherit;
+            font-size: 8rem;
+            letter-spacing: 1rem;
+
+            animation-name: moveInRight;
+            animation-duration: 1s;
+            animation-timing-function: ease-out;
+
+            @include respond(tab-port) {
+                font-size: 7rem;
+            }
+
+            @include respond(tab-small) {
+                font-size: 5rem;
+                margin-top: 2rem;
+            }
+
+            @include respond(phone) {
+                margin-top: 1rem;
+            }
+    }
+
+    &__secondary {
+        color: $color-white;
+        text-transform: uppercase;
+        font-family: inherit;
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+
+        @include respond(tab-small) {
+            font-size: 2rem;
+        }
+    }
+}

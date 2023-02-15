@@ -1,0 +1,85 @@
+.top9List {
+    text-align: center;
+    margin-top: 8rem;
+
+    @include respond(tab-medium) {
+        margin-top: 5rem;
+    }
+
+    &__ButtonContainer {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 2rem;
+
+        @include respond(tab-small) {
+            flex-direction: column;
+            margin-bottom: 4rem;
+            align-items: center;
+        }
+    }
+
+    &__choosingButton {
+        padding: 1.5rem;
+        border: none;
+        border-radius: 0.5rem;
+        box-shadow: 0 0 2rem 1rem rgba($color-black, .1);
+        cursor: pointer;
+        transition: all .2s ease-in-out;
+        background-color: $color-black;
+        font-weight: bolder;
+        color: $color-white;
+
+        &--selected {
+            background-color: $color-royalblue;
+            color: $color-white;
+
+            @include respond(tab-small) {
+                background-color: $color-present;
+                color: $color-white;
+            }
+        }
+
+        @include respond(tab-small) {
+            margin: 1rem;
+            width: 70%;
+        }
+    }
+
+    &__choosingButton:hover {
+        transform: translateY(-0.1rem);
+        box-shadow: 0 0 2rem 1rem rgba($color-black, .15);
+    }
+
+    &__listContainer {
+            display: grid;
+            grid-template-columns:repeat(3, 30.333%);
+            grid-template-rows: repeat(3, minmax(150px, min-content));
+            grid-gap: 2rem;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 4rem;
+        
+            & > * {
+                align-self: stretch;
+            }
+
+            @include respond(tab-land) {
+                grid-template-columns: repeat(2, 45%);
+                grid-template-rows: repeat(5, minmax(140px, min-content));   
+                grid-gap: 2rem;
+            }
+        
+            @include respond(tab-small) {
+                grid-template-columns: 90%;
+                grid-template-rows: repeat(9, minmax(120px, min-content));
+            }
+    }
+
+    &__noThoughts {
+        grid-row: 2 / -1;
+        grid-column: 1 / -1;
+        font-size: 2rem;
+        color: $color-white;
+
+    }
+}
